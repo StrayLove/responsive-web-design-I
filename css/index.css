@@ -297,19 +297,16 @@ header section{
 
 /********* 800px view *********/
 
-.logo {
-	margin-top: -10px;
-}
-
     /*--- mobile ---*/
     @media (max-width: 800px) {
         .logo {
             display: none;
         }
+
     }
 
 
-
+/********* 800px view *********/
 
 body {
 	margin: 25px 50px;
@@ -336,39 +333,57 @@ hr.phone {
 
 /******************** NAV ******************/
 
-nav {
-	display: flex;
-	justify-content: space-between;
-}
-
     /*--- phone ---*/
     @media (max-width: 500px) {
         nav {
             flex-direction: column;
-        }
-    }
-
-nav a {
-	color: gray;
-	margin-right: 65px;
-}
-
-    /*--- phone ---*/
-    @media (max-width: 500px) {
+        } 
         nav a {
             align-self: center;
             margin: 6% 0;
             font-size: 1.25em;
         }
-    }
+        .contact {
+            width: 100%;
+            margin: 10% 0;
+            padding: 0;
+            }
 
-nav a:hover {
-	color: #00e600;
-}
+            hr.phone {
+                display: flex;
+                color: gray;
+                width: 100%;
+            }
+
+            .content-one {
+                flex-direction: column;
+            }
+
+            .top-content {
+                width: 100%;
+            margin: 15% 0 0 0;
+            }
+
+            .header-right {
+                display: none;
+            }
+
+            .header-img {
+                display: none;
+            }
+
+            img {
+                display: none;
+            }
+        }   
+
+
+   
 
 
 
-/******************** CONTACT ******************/
+
+
 
 .contact {
 	display: flex;
