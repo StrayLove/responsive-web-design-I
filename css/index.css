@@ -295,68 +295,113 @@ header section{
 	animation-duration: 3s;
 }
 
+/********* 800px view *********/
+
+.logo {
+	margin-top: -10px;
+}
+
+    /*--- mobile ---*/
+    @media (max-width: 800px) {
+        .logo {
+            display: none;
+        }
+    }
+
 
 /******************** GENERAL ******************/
 
-body{
-    margin: 25px 50px;
+body {
+	margin: 25px 50px;
 }
 
-hr{
+hr {
 	color: gray;
     margin: 0;
     width: 100%;
 }
 
-hr.phone{
+hr.phone {
     display: none;
 }
 
-
-/*trying tablet view for practice*/
-@media screen and (max-width: 822) , screen and (max-height: 1370) {
-   hr.phone {
-       display: flex;
-       width: 100%;
-   }
-}
-
- /*--- phone ---*/
- @media (max-width: 500px) {
-    hr.phone {
-        display: flex;
-        width: 100%;
+    /*--- phone ---*/
+    @media (max-width: 500px) {
+        hr.phone {
+            display: flex;
+            width: 100%;
+        }
     }
-}
-
-.container {
-max-width: 880px;
-margin: 0 auto;
-}
 
 
 /******************** NAV ******************/
 
 nav {
-    display: flex;
-
+	display: flex;
+	justify-content: space-between;
 }
 
-@media (max-width: 500px) {
-    nav {
-        flex-direction: column;
+    /*--- phone ---*/
+    @media (max-width: 500px) {
+        nav {
+            flex-direction: column;
+        }
     }
-} nav a {
-    align-self: center;
-    margin: 6% 0;
-    font-size: 1.25em;
-}nav a {
-    color: gray;
-    margin-right: 65px;
-} .header-right {
-    display: none;
+
+nav a {
+	color: gray;
+	margin-right: 65px;
 }
 
+    /*--- phone ---*/
+    @media (max-width: 500px) {
+        nav a {
+            align-self: center;
+            margin: 6% 0;
+            font-size: 1.25em;
+        }
+    }
+
+nav a:hover {
+	color: #00e600;
+}
+
+
+
+/******************** CONTACT ******************/
+
+.contact {
+	display: flex;
+    flex-direction: column;
+    margin: 3% 0 2% 1%;
+}
+
+    /*--- phone ---*/
+    @media (max-width: 500px) {
+        .contact {
+            width: 100%;
+            margin: 10% 0;
+            padding: 0;
+            }
+    }
+
+/******************** FOOTER ******************/
+
+footer {
+	display: flex;
+	justify-content: center;
+}
+
+    /*--- phone ---*/
+    @media (max-width: 500px) {
+        footer {
+            margin: 10% 0;
+            }
+    }
+
+footer p {
+	margin: 3% 1%;
+}
 
 
 
