@@ -51,8 +51,9 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
+/* ^ If you set max-width to 100% here, all your images will decrease in size with the window instead of going out of bounds */
 
 html, body {
     height: 100%;
@@ -300,4 +301,6 @@ footer {
       padding: 22px;
 
   }
+
+  /* Don't forget to change your content sections in here to match the mobile design file, so that they are columns instead of rows */
 }
