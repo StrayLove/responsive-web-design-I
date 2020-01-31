@@ -1,7 +1,10 @@
+/* Use your own code or past solution for Great Idea Web Page CSS here! */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,361 +49,308 @@ table {
 	border-spacing: 0;
 }
 
+/* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 
-/*BOXES*/
-.middle-content .boxes{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.middle-content .boxes .box{
-    width: 12.5%;
-    height: 100px;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-h1, h2, h3, h4, h5{
-    font-size: 18px;
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
     margin-bottom: 15px;
-    font-family: 'Rubik', sans-serif;
 }
 
-p{
-    line-height: 1.4;
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+html {
+    font-size: 62.5%;
 }
 
-.container{
-    width: 800px;
-    margin: 0 auto;
+body {
+	display: flex;
+	justify-content: center;
 }
 
-.top-content{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
+.container {
+	max-width: 880px;
 }
 
-.top-content .text-container {
-    width: 48%;
-    padding: 0 1%;
-    padding-bottom: 20px;
+/* header */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 36px;
 }
+
+header nav {
+	display: flex;
+	justify-content: space-between;
+	color: gray;
+	font-size: 1.6rem;
+	width: 69%;
+}
+
+header nav a {
+	color: gray;
+	text-decoration: none;
+}
+
+header nav a:hover {
+	text-decoration: underline;
+}
+
+/* call to action */
+
+.cta {
+	display: flex;
+	justify-content: flex-end;
+	margin: 68px 0 74px 0;
+}
+
+.cta-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 7.2rem;
+	padding: 0 1% 0 0;
+	width: 51.1%;
+}
+
+.cta p {
+	border: 1px solid black;
+	background: white;
+	padding: 7px 43px;
+	margin-top: 10px;
+	font-size: 1.6rem;
+	font-family: Helvetica, sans-serif;
+}
+
+.cta a {
+	color: black;
+	text-decoration: none;
+}
+
+.cta a:hover p {
+	background: black;
+	color: white;
+}
+
+/* middle content START */
 
 .middle-content {
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	padding: 36px 0;
 }
 
-.middle-content h2 {
-    padding: 0 2%;
-    margin-bottom: 0;
+.top-content, .bottom-content {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.6rem;
 }
 
-.bottom-content{
-    display: flex;
-    margin: 0 2% 20px;
-    justify-content: space-around;
+.top-content .text-content {
+	width: 51.1%;
+	line-height: 1.15;
 }
 
-.bottom-content .text-container{
-    padding-right: 4%;
+.bottom-content .text-content {
+	width: 33.2;
+	padding: 0 2.2% 0 0;
+	line-height: 1.15;
 }
 
-.bottom-content .text-container:last-child{
-    padding-right: 0;
+.middle-img {
+	margin: 30px 0 28px 0;
+}
+/* middle content END */
+
+/* footer START */
+
+.contact {
+	margin: 35px 0;
+	font-size: 1.6rem;
 }
 
-footer{
-    width: 100%;
-    background: black;
+.contact p {
+	margin: 15px 0;
 }
 
-footer nav{
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 2%;
-    font-size: 14px;
+footer {
+	text-align: center;
+	margin: 38px 0;
+	font-size: 1.6rem;
+}
+/* footer END */
 
+/* services CSS Start */
+
+.services-header-img {
+	margin: 25px 0px;
 }
 
-footer nav a{
-    background: black;
-    text-decoration: none;
+/* services */
+
+.services {
+	border-bottom: 1px solid black;
+	padding-bottom: 40px;
 }
 
-header nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    padding: 2.3em;
+.services h2 {
+	font-size: 2.4rem;
 }
 
-header p, header h2{
-    margin: 25px;
+/* services END */
+
+/* SECTION */
+.middle-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 20px;
 }
 
-header nav a{
-    text-decoration: none;
-    color: black;
+.middle-container .text-content {
+	border: 1px solid black;
+	width: 420px;
+	margin: 20px 0;
+	padding: 20px;
+	line-height: 1.2;
 }
 
-header nav a:hover{
-  color: green;
+.middle-container .text-content .learn-more {
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 140px;
+	padding: 10px 30px;
+	margin-top: 25px;
+	text-align: center;
+	font-size: 1.2rem;
+}
+/* SECTION END */
+
+/* FACTS Start */
+
+.bottom-container {
+	display: flex;
+	justify-content: space-between;
+	border-top: 2px solid black;
+	margin: 20px 0;
+	padding: 40px 0;
 }
 
-button{
-    background-color: white;
-    border: 2px solid black;
-    color: black;
-    border-radius: 10px;
-    padding: 12px 28px;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+.bottom-container .facts {
+	width: 410px;
+	line-height: 1.2;
 }
 
-button:hover{
-    background-color: black;
-    color: green;
+.bottom-container .facts ul li {
+	list-style-type: square;
+	list-style-position: inside;
+	margin: 14px 0;
 }
 
-.row{
-    display: flex;
-    flex-direction: row;
-}
+/* FACTS END */
 
-.col{
-    flex-direction: column;
-}
+/* tablet media query START */
 
-section{
-    padding: 2em;
-}
-
-.row section{
-    border-bottom: 2px dashed black;
-    margin: 12px;
-}
-
-header section{
-    border-bottom: 2px dashed black;
-}
-
-
-@keyframes slidein {
-	0% {transform: translateX(-700px);}
-	100% {transform: translateX(0px); }
-}
-
-
-@keyframes slidein2 {
-	0%{transform: translateX(700px);}
-	100%{transform: translateX(0px);}
-}
-
-@keyframes spin {
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
-}
-
-.middle-content .boxes .box1{
-    background: teal;
-    display: 2;
-	animation: spin;
-	animation-duration: 3s;
-}
-
-.middle-content .boxes .box2{
-    background: gold;
-    display: 2;
-	animation: spin;
-	animation-duration: 3s;
-}
-
-
-.middle-content .boxes .box3{
-    background: cadetblue;
-    display: 2;
-	animation: spin;
-	animation-duration: 3s;
-}
-
-.middle-content .boxes .box4{
-    background: coral;
-    display: 2;
-	animation: slidein2;
-	animation-duration: 3s;
-}
-
-.middle-content .boxes .box5{
-    background: crimson;
-    display: 2;
-	animation: spin;
-	animation-duration: 3s;
-}
-
-.middle-content .boxes .box6{
-    background: forestgreen;
-    display: 2;
-	animation: slidein2;
-	animation-duration: 3s;
-}
-
-.middle-content .boxes .box7{
-    background: darkorchid;
-    display: 2;
-	animation: spin;
-	animation-duration: 3s;
-}
-
-.middle-content .boxes .box8{
-    background: hotpink;
-    display: 2;
-	animation: slidein2;
-	animation-duration: 3s;
-    
-}
-
-.middle-content .boxes .box9{
-    background: indigo;
-    display: 2;
-	animation: spin;
-	animation-duration: 3s;
-}
-
-.middle-content .boxes .box10{
-    background: dodgerblue;
-    display: 2;
-	animation: slidein2;
-	animation-duration: 3s;
-}
-
-
-
-/********* 800px view *********/
-
-
-    /*--- phone ---*/
-    @media (max-width: 800px) {
-        .header-right {
-            display: none;
-        }
-
-        .header-left {
-            width: 100%
-        }
-         
-        .logo-mobile-container {
-            display: flex;
-            justify-content: center;
-            margin: 6% 0 5% 0;
-        }
-        
-        
-        
-
-
-
+/*@media (max-width: 800px) {
+    .container {
+        width: 90%;
     }
 
+    header {
+        flex-direction: column-reverse;
+    }
 
-    /*--- phone ---*/
-    @media (max-width: 500px) {
-        nav {
-            flex-direction: column;
-            text-decoration: none;
-        } 
+    header nav {
+        margin-top: 45px;
+        width: 91%;
+    }
 
-        nav a {
-            align-self: center;
-            margin: 6% 0;
-            font-size: 1.25em;
-        }
+    header nav a:last-child{
+        margin-right: 0;
+    }
 
-        .contact {
-            width: 100%;
-            margin: 10% 0;
-            padding: 0;
-        }
+    .cta {
+        justify-content: center;
+    }
 
-        hr.phone {
-            display: flex;
-            color: gray;
-            width: 100%;
-        }
+    .header-img {
+        display: none;
+    }
 
-        .content-one {
-            flex-direction: column;
-        }
+    .middle-img {
+        max-width: 100%;
+        height: auto;
+    }
 
-        .top-content {
-            width: 100%;
-            margin: 15% 0 0 0;
-        }
-            
-        footer {
-            margin: 10% 0;
-        }
-          
-        .contact {
-            width: 100%;
-            margin: 10% 0;
-            padding: 0;
-        }
+    .text-content {
+        margin: 0 5px;
+    }
+}
+/* tablet media query END */
 
-        body {
-            margin: 25px 50px;
-        }
-        
-        hr {
-            color: gray;
-            margin: 0;
-            width: 100%;
-        }
-        
-        hr.phone {
-            display: none;
-        }
+/* mobile phone media query START */
+/*@media (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
 
-        .logo-mobile-container {
-            display: flex;
-            justify-content: center;
-            margin: 6% 0 5% 0;
-        }
-        
-         
+    header nav {
+        width: 100%;
+        flex-direction: column;
+    }
 
-        }   
+    header nav a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        border-bottom: 1px solid black;
+    }
 
+    header nav a:first-child {
+        border-top: 1px solid black;
+    }
 
-   
+    .top-content, .bottom-content {
+        flex-direction: column;
+    }
 
+    .top-content .text-content, .bottom-content .text-content, .contact {
+        width: 90%;
+        margin: 25px;
+    }
+}*/
 
+/******* 800px *******/
 
+@media (max-width: 800px) {
+	.header-img {
+        display: none;
+    }
 
+    .container {
+        width: 90%;
+    }
 
+    .cta {
+        justify-content: center;
+    }
 
+    header {
+        flex-direction: column-reverse;
+    }
 
-
-
-
+    
+}
